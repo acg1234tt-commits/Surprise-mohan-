@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diwali Mubarak My Rabia ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+ background:#100817;
+ color:#fff4e8;
+ font-family:Georgia,serif;
+ overflow-x:hidden;
+}
+
+#stars{
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ background-image:
+ radial-gradient(#fff 1px,transparent 1px),
+ radial-gradient(#ffd58a 1px,transparent 1px);
+ background-size:65px 65px,105px 105px;
+ animation:twinkle 4s infinite alternate;
+ z-index:0;
+}
+
+@keyframes twinkle{
+ from{opacity:.7}
+ to{opacity:.2}
+}
+
+.petal{
+ position:fixed;
+ top:-30px;
+ color:#ff6685;
+ font-size:20px;
+ animation:fall linear infinite;
+ pointer-events:none;
+ z-index:2;
+}
+
+@keyframes fall{
+ to{transform:translateY(110vh) rotate(500deg)}
+}
+
+.slide{
+ min-height:100vh;
+ display:none;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ padding:35px 20px 110px;
+ position:relative;
+ z-index:1;
+}
+
+.slide.active{
+ display:flex;
+ animation:appear 1s ease;
+}
+
+@keyframes appear{
+ from{opacity:0;transform:translateY(25px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+.content{
+ max-width:680px;
+ width:100%;
+}
+
+.tag{
+ color:#ffd58a;
+ letter-spacing:4px;
+ font:12px Arial;
+ text-transform:uppercase;
+}
+
+h1{
+ font-size:clamp(40px,10vw,75px);
+ color:#ffdb96;
+ font-weight:normal;
+ margin:25px 0;
+ text-shadow:0 0 25px #ffae55;
+}
+
+h2{
+ font-size:clamp(30px,7vw,48px);
+ color:#ffdb96;
+ font-weight:normal;
+ margin:20px 0;
+}
+
+p{
+ font-size:19px;
+ line-height:1.9;
+ margin:18px auto;
+ color:#ffecdf;
+}
+
+.diya{
+ font-size:85px;
+ animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+ to{filter:drop-shadow(0 0 30px orange)}
+}
+
+button{
+ background:linear-gradient(135deg,#ffe1a1,#d98a55);
+ color:#321522;
+ border:0;
+ padding:14px 27px;
+ border-radius:30px;
+ font-weight:bold;
+ font-size:15px;
+ margin:12px 5px;
+ cursor:pointer;
+}
+
+.secondary{
+ background:transparent;
+ color:#ffdb96;
+ border:1px solid #ffdb96;
+}
+
+.box{
+ border:1px solid #ffdb9660;
+ background:#ffffff0b;
+ padding:25px;
+ border-radius:22px;
+ box-shadow:0 0 35px #0005;
+ margin:20px 0;
+}
+
+.heart{
+ font-size:45px;
+ color:#ff7899;
+ animation:heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat{
+ 50%{transform:scale(1.2)}
+}
+
+.gift{
+ font-size:100px;
+ cursor:pointer;
+ animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+ 50%{transform:translateY(-12px)}
+}
+
+.hidden{display:none}
+.hidden.show{display:block;animation:appear 1s}
+
+.photo{
+ width:min(100%,470px);
+ border-radius:22px;
+ border:3px solid #ffdb96;
+ box-shadow:0 0 40px #ffbd6c70;
+ margin:25px auto;
+}
+
+.final{
+ font-size:clamp(28px,7vw,43px);
+ color:#ffdb96;
+ line-height:1.5;
+}
+
+.navigation{
+ position:fixed;
+ bottom:12px;
+ left:0;
+ right:0;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ gap:10px;
+ z-index:10;
+}
+
+#counter{
+ color:#ffdb96;
+ font:13px Arial;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<audio id="song" loop>
+ <source src="jalte-diye.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SLIDE 1 -->
+
+<section class="slide active">
+ <div class="content">
+  <div class="diya">🪔</div>
+  <div class="tag">A surprise made with love</div>
+
+  <h1>Happy Diwali<br>My Rabia ❤️</h1>
+
+  <p>
+   Is baar aapke liye sirf ek wish nahi...
+   balki mere dil ki kuch baatein hain.
+  </p>
+
+  <button onclick="startSurprise()">
+   Open Your Surprise ✨
+  </button>
+
+  <p style="font-size:13px">
+   🎶 Tap to begin the surprise
+  </p>
+ </div>
+</section>
+
+<!-- SLIDE 2 -->
+
+<section class="slide">
+ <div class="content">
+  <div class="tag">For someone special</div>
+  <h2>Meri Pyaari Rabia ❤️</h2>
+
+  <div class="box">
+   <p>
+    Diwali ki is khoobsurat shaam par meri
+    sabse pehli dua aapke naam hai.
+   </p>
+
+   <p>
+    Khuda kare aapki zindagi ka har kona
+    roshni se bhar jaaye, har khwaab
+    haqeeqat bane aur har din aapke liye
+    ek nayi khushi lekar aaye.
+   </p>
+  </div>
+
+  <div class="heart">♥</div>
+ </div>
+</section>
+
+<!-- SLIDE 3 -->
+
+<section class="slide">
+ <div class="content">
+  <div class="tag">A little prayer</div>
+  <h2>Ek Khoobsurat Dua 🌙</h2>
+
+  <div class="box">
+   <p>
+    Aapki zindagi hamesha noor se
+    <b>munawwar</b> rahe.
+   </p>
+
+   <p>
+    Aapke har khwaab ko khoobsurat
+    <b>taabeer</b> mile.
+   </p>
+
+   <p>
+    Aapko bepanah khushiyan, sehat,
+    mohabbat aur sukoon naseeb ho.
+   </p>
+
+   <p>Har dua mein aapki khushi shaamil hai. ❤️</p>
+  </div>
+ </div>
+</section>
+
+<!-- SLIDE 4 -->
+
+<section class="slide">
+ <div class="content">
+  <div class="tag">Distance cannot change feelings</div>
+  <h2>Kaash Aaj Aap Paas Hoti 🥺</h2>
+
+  <p>
+   Kaash is Diwali hum saath hote...
+   saath mein diye jalate, mithai khate,
+   thodi si masti karte aur bahut saari
+   yaadein banate.
+  </p>
+
+  <p>
+   Shayad abhi hum door hain, lekin
+   meri duaon mein aap hamesha mere paas hain.
+  </p>
+
+  <div class="heart">❤️</div>
+ </div>
+</section>
+
+<!-- SLIDE 5 -->
+
+<section class="slide">
+ <div class="content">
+  <div class="tag">Something from my heart</div>
+  <h2>Aap Mere Liye Khaas Hain</h2>
+
+  <div class="box">
+   <p>
+    Aapki chhoti-chhoti baatein,
+    aapka waqt aur aapka saath
+    mere liye bahut maayne rakhta hai.
+   </p>
+
+   <p>
+    Main chahta hoon ki aap apne
+    har khwaab ko poora karein,
+    khoob aage badhein aur hamesha
+    khush rahein.
+   </p>
+
+   <p>
+    Aapki muskurahat hamesha yunhi bani rahe. 🥹
+   </p>
+  </div>
+ </div>
+</section>
+
+<!-- SLIDE 6: GIFT -->
+
+<section class="slide">
+ <div class="content">
+  <div class="tag">A special gift</div>
+  <h2>Aapke Liye Ek Tohfa 🎁</h2>
+
+  <p>
+   Is gift ko kholkar dekhiye...
+   ismein kuch mere dil ki baatein hain.
+  </p>
+
+  <div class="gift" onclick="openGift()">🎁</div>
+
+  <div id="giftMessage" class="hidden box">
+   <h2>Surprise! ❤️</h2>
+
+   <p>
+    Meri Hukum, aap mere liye kisi
+    khoobsurat tohfe se kam nahi hain.
+   </p>
+
+   <p>
+    Main bas chahta hoon ki aapki
+    zindagi mein kabhi khushiyon ki
+    kami na ho.
+   </p>
+
+   <p>
+    Aap hamesha muskurati rahiye. 🥰
+   </p>
+  </div>
+
+  <button class="secondary" onclick="openGift()">
+   Open Gift 💝
+  </button>
+ </div>
+</section>
+
+<!-- SLIDE 7 -->
+
+<section class="slide">
+ <div class="content">
+  <div class="diya">✨</div>
+  <div class="tag">One last thing</div>
+
+  <h2>Ek Baat Kahoon?</h2>
+
+  <p>
+   Main nahi jaanta aane wali har Diwali
+   kaisi hogi, lekin meri dua hai ki
+   aapki zindagi ka har aane wala saal
+   pehle se zyada khoobsurat ho.
+  </p>
+
+  <p>
+   Thank you meri zindagi ka itna
+   pyaara hissa banne ke liye.
+  </p>
+
+  <button onclick="nextSlide()">
+   Last Surprise ❤️
+  </button>
+ </div>
+</section>
+
+<!-- LAST SLIDE WITH YOUR PHOTO -->
+
+<section class="slide">
+ <div class="content">
+
+  <div class="tag">With all my heart</div>
+
+  <h2>Ye Main Hoon... ❤️</h2>
+
+  <img
+   src="mohan-photo.png"
+   class="photo"
+   alt="Mohan with a bouquet of roses"
+  >
+
+  <div class="final">
+   I Love You, Rabia ❤️
+  </div>
+
+  <p>
+   Sachhi-muchchii, dil se...
+   aapko bahut saara pyaar.
+  </p>
+
+  <h2>Happy Diwali, Meri Jaan! 🪔</h2>
+
+  <p style="font-size:15px">
+   Hamesha khush rahiye.<br>
+   Sirf aapke liye — Mohan ❤️
+  </p>
+
+  <button class="secondary" onclick="restart()">
+   Replay Surprise ↻
+  </button>
+
+ </div>
+</section>
+
+<div class="navigation">
+ <button class="secondary" id="back" onclick="previousSlide()">
+  ← Back
+ </button>
+
+ <span id="counter">1 / 8</span>
+
+ <button id="next" onclick="nextSlide()">
+  Next →
+ </button>
+</div>
+
+<script>
+
+let current=0;
+
+const slides=document.querySelectorAll(".slide");
+
+function showSlide(){
+
+ slides.forEach((slide,index)=>{
+  slide.classList.toggle("active",index===current);
+ });
+
+ document.getElementById("counter").textContent=
+ (current+1)+" / "+slides.length;
+
+ document.getElementById("back").style.display=
+ current===0?"none":"inline-block";
+
+ document.getElementById("next").style.display=
+ current===slides.length-1?"none":"inline-block";
+
+}
+
+function nextSlide(){
+
+ if(current<slides.length-1){
+  current++;
+  showSlide();
+ }
+
+}
+
+function previousSlide(){
+
+ if(current>0){
+  current--;
+  showSlide();
+ }
+
+}
+
+function startSurprise(){
+
+ const song=document.getElementById("song");
+
+ song.play().catch(()=>{
+  alert("Song play karne ke liye jalte-diye.mp3 file add karein.");
+ });
+
+ nextSlide();
+
+}
+
+function openGift(){
+
+ document.getElementById("giftMessage")
+ .classList.add("show");
+
+}
+
+function restart(){
+
+ current=0;
+
+ document.getElementById("giftMessage")
+ .classList.remove("show");
+
+ showSlide();
+
+}
+
+function createPetal(){
+
+ const petal=document.createElement("div");
+
+ petal.className="petal";
+ petal.innerHTML="🌹";
+
+ petal.style.left=Math.random()*100+"vw";
+ petal.style.animationDuration=(5+Math.random()*6)+"s";
+ petal.style.opacity=Math.random();
+
+ document.body.appendChild(petal);
+
+ setTimeout(()=>petal.remove(),11000);
+
+}
+
+setInterval(createPetal,650);
+
+showSlide();
+
+</script>
+
+</body>
+</html>
